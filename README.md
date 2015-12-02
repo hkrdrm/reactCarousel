@@ -1,13 +1,9 @@
 # reactCarousel
 React Component that auto builds your bootstrap carousel
 
-I'm using php to pull a list image locations from a wordpress database and
-spitting out into json string like this:
+I'm using php to pull a list image locations that contain the word "promo" in the
+filename from a wordpress database and spitting it out into json string.
+You could just as easy a create static list.  I just needed a way to dynamically
+build a carousel based on what someone uploads to the wordpress site.
 
-echo "<script>var images = " . json_encode($promo) . "</script>";
-
-you could just as easily plugin a static list or whatever.
-
-Just put this give the html file a div to post to and react does the rest.
-
-<div id="slides"></div>
+Just give the html page div with id=slides and your ready to go.
