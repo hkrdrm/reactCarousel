@@ -33,7 +33,7 @@ class Slide extends React.Component {
     className = this.props.index == 0? 'item active' : 'item';
     return(
       <div className={ className }>
-        <img src={this.props.imgSrc} alt="..." width="100%"/>
+        <img src={ this.props.imgSrc } alt="..." width="100%"/>
       </div>
     );
   }
@@ -41,7 +41,7 @@ class Slide extends React.Component {
 
 function renderCarouselatNode(images, node){
   return ReactDOM.render(
-    <Carousel image_urls={images}/>,
+    <Carousel image_urls={ images }/>,
     node
   );
 }
