@@ -1,5 +1,4 @@
-Carousel.propTypes = { image_urls: React.PropTypes.array };
-Carousel.defaultProps = { image_urls: [] };
+"use strict";
 
 class Carousel extends React.Component {
   render(){
@@ -27,10 +26,12 @@ class Carousel extends React.Component {
     );
   }
 }
+Carousel.propTypes = { image_urls: React.PropTypes.array };
+Carousel.defaultProps = { image_urls: [] };
 
 class Slide extends React.Component {
   render(){
-    className = this.props.index == 0? 'item active' : 'item';
+    let className = this.props.index == 0? 'item active' : 'item';
     return(
       <div className={ className }>
         <img src={ this.props.imgSrc } alt="..." width="100%"/>
@@ -42,6 +43,6 @@ class Slide extends React.Component {
 function renderCarouselatNode(images, node){
   return ReactDOM.render(
     <Carousel image_urls={ images }/>,
-    node
+    document.getElementById(node)
   );
 }
